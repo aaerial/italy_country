@@ -1,8 +1,17 @@
 * {
-    /*Universal Reset (get rids of the space */
+    /*Universal Reset (get rids of the spaces) */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    background-image: url("italy_background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    /* background-color: red; */
 }
 
 #flag-icon {
@@ -67,8 +76,9 @@
 }
 
 .flag-container {
-    border: solid;
+    /* border: solid; */
     display: flex;
+    position: relative;
 }
 
 #green,
@@ -80,13 +90,32 @@
 }
 
 #green {
-    background-color: green;
+    /* background-color: green; */
+    background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgba(0,128,0, 1));
 }
 
 #white {
-    background-color: white;
+    /* background-color: white; */
+    background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgba(255,255,255,1));
 }
 
 #red {
-    background-color: red;
+    /* background-color: red; */
+    background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1));
+}
+
+#welcome {
+    /* border: solid; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#welcome h1 {
+    border: solid;
+    font-size: 100px;
+    font-family: 'Spectral', serif;
+    text-align: center;
+    margin-left: 50px;
 }
