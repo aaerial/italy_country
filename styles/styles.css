@@ -3,6 +3,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
 }
 
 body {
@@ -11,7 +13,9 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
-    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    /* border: 10px solid; */
 }
 
 #flag-icon {
@@ -91,12 +95,12 @@ body {
 
 #green {
     /* background-color: green; */
-    background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgba(0,128,0, 1));
+    background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgba(0, 128, 0, 1));
 }
 
 #white {
     /* background-color: white; */
-    background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgba(255,255,255,1));
+    background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgba(255, 255, 255, 1));
 }
 
 #red {
@@ -117,5 +121,57 @@ body {
     font-size: 100px;
     font-family: 'Spectral', serif;
     text-align: center;
-    margin-left: 50px;
+}
+
+#hand {
+    width: 100px;
+    /* #hand needs a width so #hand-icon knows what to scale to */
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* border: solid; */
+    text-align: center;
+    font-size: 30px;
+}
+
+#hand-icon {
+    height: auto;
+    width: 100px;
+    margin: -15px;
+    /* border: solid; */
+    border-radius: 50%;
+}
+
+#hand a {
+    color: black;
+}
+
+#hand-icon:hover {
+    color: white;
+    box-shadow: 0 0 25px white,
+        0 0 25px white;
+    transform: scale(1.1);
+}
+
+#hand a:hover {
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    transform: scale(1.1);
+}
+
+
+#about {
+    border: solid;
+    margin: 70px;
+    height: 650;
+    width: 550;
+    background-color: #8e8744 rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+p {
+    font-size: 30px;
+    text-justify: auto;
+    text-indent: 30px;
 }
