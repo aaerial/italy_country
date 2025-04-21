@@ -8,6 +8,11 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+}
+
+.upper-section {
     background-image: url("italy_background.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -15,7 +20,13 @@ body {
     background-size: cover;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
     /* border: 10px solid; */
+}
+
+.lower-section {
+    background-color: #202020;
+    min-height: 100vh;
 }
 
 #flag-icon {
@@ -160,18 +171,34 @@ body {
     transform: scale(1.1);
 }
 
-
 #about {
-    border: solid;
-    margin: 70px;
+    /* border: solid red; */
+    margin: 50px;
     height: 650;
     width: 550;
-    background-color: #8e8744 rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
 }
 
-p {
-    font-size: 30px;
-    text-justify: auto;
+#about h1, p {
+    color: white;
+    padding: 10px;
+}
+
+#about p {
+    font-size: 25px;
+    text-align: justify;
     text-indent: 30px;
+    /* text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; */
+}
+
+#milan-img {
+    float:right;
+    height: auto;
+    width: 250px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+#slider img {
+    width:100px;
+    height:100px;
 }
