@@ -12,9 +12,9 @@
 
 <body>
     <header class="header">
-        <a><img src="images/icon_italy.jpg" alt="Flag of Italy" id="flag-icon"></a>
+        <a href="https://en.wikipedia.org/wiki/Italy" target="_blank"><img src="images/icon_italy.jpg" alt="Flag of Italy" id="flag-icon"></a>
         <nav class="navbar">
-            <a id="nav-1">Tourist Spots</a>
+            <a id="nav-1" href="#about">Tourist Spots</a>
             <a id="nav-2">Foods</a>
             <a id="nav-3">Brain Rot</a>
         </nav>
@@ -27,7 +27,7 @@
             <div id="welcome">
                 <h1>Benvenuti in Italia!</h1>
             </div>
-            <div id="hand"><a href="#about"><img src="images/italian_hand.png" alt="Pinched Fingers" id="hand-icon"></a>
+            <div id="hand"><a><img src="images/italian_hand.png" alt="Pinched Fingers" id="hand-icon"></a>
             </div>
         </div>
     </section>
@@ -52,15 +52,17 @@
                         <p id="total-slides">n</p>
                     </div>
                     <button id="prev-button" onclick="prevSlide()">&#10094</button>
-                    <img src="images/milan_italy.jpg" />
-                    <img src="images/icon_italy.jpg" />
-                    <img src="images/waving_flag.jpeg" />
+                    <img src="images/colosseum.jpg" />
+                    <img src="images/canal.jpg" />
+                    <img src="images/pisa.jpg" />
+                    <img src="images/amalfi.jpg" />
+                    <img src="images/florence.jpg" />
                     <button id="next-button" onclick="nextSlide()">&#10095</button>
                 </div>
             </div>
             <div id="place-about">
-                <h1>Tourist Spots</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt blanditiis hic sequi repudiandae incidunt nihil voluptatibus fugit dolor sit ullam. Numquam facere libero praesentium culpa nemo sed harum possimus ullam!</p>
+                <h1 id="name-place">Colosseum - Rome's Timeless Arena</h1>
+                <p id="place-desc">Step into the heart of ancient Rome with a visit to the Colosseum, the largest amphitheater ever built. Once home to gladiator battles and grand spectacles, it’s a powerful reminder of the empire’s architectural brilliance and dramatic history.</p>
             </div>
         </div>
     </section>

@@ -184,7 +184,7 @@ body {
     padding: 10px;
 }
 
-#about p {
+#about p, #place-about p {
     font-size: 25px;
     text-align: justify;
     text-indent: 30px;
@@ -197,6 +197,7 @@ body {
     width: 250px;
     margin-left: 20px;
     margin-bottom: 10px;
+    border-radius: 5%;
 }
 
 #slider-container {
@@ -214,8 +215,9 @@ body {
 
 #slider img {
     width:500px;
-    height:auto;
+    height:300px;
     display: none;
+    overflow: hidden;
 }
 
 #slider img.displaySlide {
@@ -253,6 +255,7 @@ body {
 #img-indicator {
     display: flex;
     position: absolute;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 #img-indicator p {
@@ -261,7 +264,7 @@ body {
 }
 
 #place-about {
-    border: yellow solid;
+    /* border: yellow solid; */
     padding: 10px;
     margin-left: 20px;
     color: white;
@@ -270,3 +273,9 @@ body {
 #place-about h1 {
     font-size: 50px;
 }
+
+#place-about h1.pisa-Exclusive,
+#place-about p.pisa-Exclusive {
+    font-style: italic;
+}
+
