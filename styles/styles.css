@@ -13,14 +13,14 @@ body {
 }
 
 .upper-section {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     background-image: url("italy_background.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
     /* border: 10px solid; */
 }
 
@@ -159,6 +159,7 @@ body {
 }
 
 #hand-icon:hover {
+    background-color: white;
     color: white;
     box-shadow: 0 0 25px white,
         0 0 25px white;
@@ -190,7 +191,7 @@ body {
     /* text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; */
 }
 
-#milan-img {
+#wavflag-img {
     float:right;
     height: auto;
     width: 250px;
@@ -199,20 +200,19 @@ body {
 }
 
 #slider-container {
-    border: blue solid;
+    /* border: blue solid; */
     margin: 50px;
     display: flex;
     justify-content: flex-start;
 }
 
 #slider {
-    border: red solid;
+    /* border: red solid; */
     position: relative;
-    overflow: hidden; /*if image is too big*/
+    /* overflow: hidden; if image is too big */
 }
 
 #slider img {
-    margin: 20px;
     width:500px;
     height:auto;
     display: none;
@@ -220,28 +220,53 @@ body {
 
 #slider img.displaySlide {
     display: block;
+    border-radius: 5%;
 }
 
-#slider button {
+#slides button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 2rem;
-    background-color: hsla(0, 0%, 0%, 0.5);
-    color: white;
+    background-color: transparent;
     border: none;
-    cursor: pointer;
+    color: white;
+    cursor: pointer;  
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
 }
 
 #prev-button {
     left: 0;
+    border-radius: 0 3px 3px 0;
 }
 
 #next-button {
     right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+#prev-button:hover, #next-button:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+#img-indicator {
+    display: flex;
+    position: absolute;
+}
+
+#img-indicator p {
+    font-size: 20px;
+    margin: 0 -15px 0 0px; /*top, right, bottom, left*/
 }
 
 #place-about {
     border: yellow solid;
     padding: 10px;
+    margin-left: 20px;
+    color: white;
+}
+
+#place-about h1 {
+    font-size: 50px;
 }
