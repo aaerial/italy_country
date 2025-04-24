@@ -14,7 +14,7 @@ const pisaP = document.querySelector("#place-about p");
 
 const slides = document.querySelectorAll("#slides img");   //gets all img elements inside the element with id="slides".
 let slideIndex = 0;
-let intervalId = null;
+// let intervalId = null;
 
 // initializeSlider();
 document.addEventListener("DOMContentLoaded", initializeSlider); //runs the function when dom is loaded but before images and stylesheets
@@ -36,9 +36,11 @@ function showSlide(index) { // handles showing the slide based on index:
     else if (index < 0) {
         slideIndex = slides.length - 1;
     }
-    slides.forEach(slides => {
-        slides.classList.remove("displaySlide"); //all image element is removed to the .displaySlide for it to not show
-    });
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("displaySlide"); //all image element is removed to the .displaySlide for it to not show
+    }
+
     slides[slideIndex].classList.add("displaySlide");  //the image in the current index will be shown since display = none;
 
     document.getElementById("curr-slide-no").textContent = slideIndex + 1;
@@ -64,4 +66,21 @@ function nextSlide() {
     // clearInterval(intervalId);
     slideIndex++;
     showSlide(slideIndex);
+}
+
+let hand = document.getElementById("hand-icon");
+let audio = document.querySelector("#italian-music");
+let isPlaying = true;
+
+function playMusic() {
+    if(isPlaying) {
+        audio.pause();
+        isPlaying = false;
+        hand.src = "images/italian_hand.png";
+    }
+    else {
+        audio.play();
+        isPlaying = true;
+        hand.src = "images/ogey.png";
+    }
 }

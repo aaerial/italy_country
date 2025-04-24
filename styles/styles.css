@@ -152,23 +152,17 @@ body {
     margin: -15px;
     /* border: solid; */
     border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 5px 4px 5px 5px black;
 }
 
-#hand a {
-    color: black;
-}
-
-#hand-icon:hover {
+#hand-icon:hover, 
+#hand a:hover {
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     background-color: white;
     color: white;
     box-shadow: 0 0 25px white,
         0 0 25px white;
-    transform: scale(1.1);
-}
-
-#hand a:hover {
-    color: white;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     transform: scale(1.1);
 }
 
@@ -277,7 +271,7 @@ body {
 }
 
 #food-section {
-    min-height: 100vh;
+    min-height: 130vh;
     background-image: url("food_bg.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -329,4 +323,9 @@ body {
     box-shadow: 0 0 25px black,
         0 0 25px black;
     transform: scale(0.9,0.9);
+}
+
+#food-heading {
+    text-align: center;
+
 }
